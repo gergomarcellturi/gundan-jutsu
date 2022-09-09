@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "ReggaeOne-Regular";
+    src: url("assets/fonts/ReggaeOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "MochiyPopOne-Regular";
+    src: url("assets/fonts/MochiyPopOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "001Shirokuma-Regular";
+    src: url("assets/fonts/001Shirokuma-Regular.otf");
+}
+
+@font-face {
+    font-family: "nagayama_kai08";
+    src: url("assets/fonts/nagayama_kai08.otf");
+}
+
+@font-face {
+    font-family: "amakara_sample";
+    src: url("assets/fonts/amakara_sample.ttf");
+}
+
+@font-face {
+    font-family: "ComicSansMS3";
+    src: url("assets/fonts/ComicSansMS3.ttf");
+}
