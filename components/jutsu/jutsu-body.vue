@@ -5,8 +5,8 @@ import ninjaCouncilLogo from "assets/svg/ninjacouncilIcon.svg";
 import moderatorLogo from "assets/svg/moderatorIcon.svg";
 import gearLogo from "assets/svg/gear.svg";
 import infoLogo from "assets/svg/info.svg";
-import {Jutsu} from "../model/Jutsu";
-import {Restriction} from "../model/enum/Restriction";
+import {Jutsu} from "../../model/Jutsu";
+import {Restriction} from "../../model/enum/Restriction";
 
 let rankMap = {
   Splus: '#e0b302',
@@ -70,7 +70,9 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  margin-left: 6px;
+  align-items: center
 }
 
 .image-container {
@@ -119,6 +121,7 @@ export default {
 .requirement-row {
   /*height: 26px;*/
   display: flex;
+  margin-left: 12px;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -136,11 +139,12 @@ export default {
 .requirement-item {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
   width: 155px;
   white-space: nowrap;
   overflow: hidden;
   margin-top: 2px;
+  align-items: center;
 }
 
 .requirement-logo {
@@ -181,12 +185,22 @@ export default {
   margin-top: 0;
   margin-bottom: 10px;
   color: #f7eacd;
+  line-height: 18px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.info-desc {
+  font-style: italic;
 }
 
 .info-logo {
   height: 16px;
+  width: 16px;
   margin-right: 4px;
-  /*fill: red;*/
+  display: inline-block;
+  background-size: contain;
+  background-image: url("assets/icons/info.png");
 }
 
 /* width */
@@ -261,8 +275,10 @@ export default {
     <div class="description-container">
       <p v-for="info in jutsu.info.sort((a, b) => a.order - b.order)"
          :style="{color: info.color}"
-         class="description">
-        <img class="info-logo" src="assets/icons/info.png">{{info.text}}
+         class="description info-desc">
+<!--        <img class="info-logo" src="'~/assets/css/styles.css'">-->
+        <div class="info-logo"></div>
+        {{info.text}}
       </p>
 
       <p class="description">

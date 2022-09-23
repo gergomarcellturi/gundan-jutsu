@@ -3,8 +3,8 @@
 import offensiveIcon from 'assets/svg/katana.svg';
 import defensiveIcon from 'assets/svg/shield.svg';
 import utilityIcon from 'assets/svg/hand.svg';
-import {Jutsu} from "../model/Jutsu";
-import {JutsuFunctionality} from "../model/enum/JutsuFunctionality";
+import {Jutsu} from "../../model/Jutsu";
+import {JutsuFunctionality} from "../../model/enum/JutsuFunctionality";
 
 
 export default {

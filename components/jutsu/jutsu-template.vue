@@ -1,9 +1,9 @@
 <script>
-import {Jutsu} from "../model/Jutsu";
 import JutsuHeader from "./jutsu-header";
 import JutsuBody from "./jutsu-body";
 import JutsuImageCarousel from "./jutsu-image-carousel";
 import JutsuFooter from "./jutsu-footer";
+import {Jutsu} from "../../model/Jutsu";
 
 export default {
   name: 'JutsuTemplate',
@@ -24,7 +24,7 @@ export default {
   margin-left: 10px;
   padding: 16px 8px 4px 8px;
   width: 400px;
-  height: 450px;
+  height: 470px;
   border: solid 2px #f58b00;
   border-radius: 2px;
   box-shadow: 0 0 8px #f58b00;

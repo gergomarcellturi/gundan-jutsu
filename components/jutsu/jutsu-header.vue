@@ -1,5 +1,6 @@
 <script>
-import {Jutsu} from "../model/Jutsu";
+
+import {Jutsu} from "../../model/Jutsu";
 
 export default {
   name: 'JutsuHeader',
@@ -31,6 +32,7 @@ export default {
   border-radius: 1em;
   /*background-color: #a86f32;*/
   z-index: 1;
+  line-height: 50px;
   color: #171717;
 }
 
