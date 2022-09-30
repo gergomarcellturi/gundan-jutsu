@@ -24,7 +24,7 @@
       </div>
     </div>
     <div>
-      <a class="mb-lg-auto nav-link active hover-pointer logout-color">Kijelentkezés</a>
+      <a @click="signOut" class="mb-lg-auto nav-link active hover-pointer logout-color">Kijelentkezés</a>
     </div>
   </nav>
 </template>

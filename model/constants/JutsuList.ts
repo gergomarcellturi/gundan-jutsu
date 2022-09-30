@@ -19,11 +19,11 @@ export const jutsuList: Jutsu[] = [
             'https://vignette1.wikia.nocookie.net/naruto/images/e/eb/Body_Replacement.PNG/revision/latest/scale-to-width-down/320?cb=20150504131249',
             'https://i.stack.imgur.com/kEe8Q.jpg'
         ],
-        kanji: '忍',
         rank: Rank.E,
         restrictions: [],
-        type: {parentType: {name: 'Ninjutsu', parentType: null, secondaryColor: '', primaryColor: ''},
+        type: {parentType: null,
             primaryColor: '#968468',
+            kanji: '忍',
             secondaryColor: '#968468',
             name: 'Akadémista Ninjutsu'},
         users: [],
@@ -49,10 +49,10 @@ export const jutsuList: Jutsu[] = [
         images: [
             'https://i33.servimg.com/u/f33/18/17/45/35/kijiga10.jpg'
         ],
-        kanji: '火',
         rank: Rank.B,
         restrictions: [],
-        type: {parentType: {name: 'Ninjutsu', parentType: null, secondaryColor: '', primaryColor: ''},
+        type: {parentType: null,
+            kanji: '火',
             primaryColor: '#a10a02',
             secondaryColor: '#EF5F5F',
             name: 'Akadémista Ninjutsu'},
@@ -72,11 +72,11 @@ export const jutsuList: Jutsu[] = [
         images: [
             'https://i.servimg.com/u/f33/18/17/45/35/juuha_11.jpg'
         ],
-        kanji: '風',
+
         rank: Rank.A,
         restrictions: [],
-        type: {parentType:
-                {name: 'Ninjutsu', parentType: null, secondaryColor: '', primaryColor: ''},
+        type: {parentType: null,
+            kanji: '風',
             primaryColor: '#048c10',
             secondaryColor: '#68f274',
             name: 'Akadémista Ninjutsu'},
@@ -96,10 +96,11 @@ export const jutsuList: Jutsu[] = [
         images: [
             'https://images2.imgbox.com/6b/a8/aamYiwx0_o.png'
         ],
-        kanji: '封',
+
         rank: Rank.S,
         restrictions: [],
-        type: {parentType: {name: 'Ninjutsu', parentType: null, secondaryColor: '', primaryColor: ''},
+        type: {parentType: null,
+            kanji: '封',
             primaryColor: '#26272e',
             secondaryColor: '#313a7d',
             name: 'Akadémista Ninjutsu'},
@@ -116,10 +117,10 @@ export const jutsuList: Jutsu[] = [
         jpName: 'Hikage ',
         jutsuRequirement: [],
         images: [],
-        kanji: '剣',
         rank: Rank.D,
         restrictions: [],
-        type: {parentType: {name: 'Ninjutsu', parentType: null, secondaryColor: '', primaryColor: ''},
+        type: {parentType: null,
+            kanji: '剣',
             primaryColor: '#312a4a',
             secondaryColor: '#ccc5e6',
             name: 'Akadémista Ninjutsu'},

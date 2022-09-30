@@ -83,7 +83,7 @@ export default {
                  background: `radial-gradient(${jutsu.type.secondaryColor}, ${jutsu.type.primaryColor})`
         }"
         class="kanji-container">
-      {{ jutsu.kanji }}
+      {{ jutsu.type.kanji }}
     </div>
     <div class="name-container">
       <div class="japanese-name jutsu-name">{{ jutsu.jpName }}</div>

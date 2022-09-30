@@ -1,22 +1,46 @@
+<script setup>
+
+const options = reactive({
+  test: 0,
+})
+
+const user = useGundanUser();
+// export default {
+//   signInWithGoogle,
+//   signOut,
+//   user: signedInUser,
+// }
+</script>
+
 <template>
-  <JutsuNav></JutsuNav>
+  <div>
+    <JutsuNav></JutsuNav>
 
-<div class="main-menu">
-  <a href="/admin/jutsu">
-    <button class="menu-button">Jutsu adminisztráció</button>
-  </a>
-  <a href="/admin/jutsu/styles"><button class="menu-button">Jutsu stílusok</button></a>
+    <div class="main-menu">
 
-  <a href="/admin/jutsu/comments"><button class="menu-button">Megjegyzés típusok</button></a>
+  <pre>
+    <span style="color: white" @click="options.test += 1">{{options.test}}</span>
+  </pre>
 
-  <a href="/admin/users"><button class="menu-button">Felhasználók</button></a>
+      <pre style="color: white; border: solid thin red">
+    {{user}}
+  </pre>
 
-  <a href="/jutsu/list"><button class="menu-button">Jutsu lista</button></a>
+      <button @click="signInWithGoogle" v-if="!user" class="menu-button login-button">Google Bejelentkezés</button>
+      <a v-if="user" href="/admin/jutsu"><button class="menu-button">Jutsu adminisztráció</button></a>
+      <NuxtLink  v-if="user" to="/admin/jutsu/styles"><button class="menu-button">Jutsu stílusok</button></NuxtLink>
 
-  <button class="logout-button">Kijelentkezés</button>
-</div>
+      <a  v-if="user" href="/admin/jutsu/comments"><button class="menu-button">Megjegyzés típusok</button></a>
+
+      <a  v-if="user" href="/admin/users"><button class="menu-button">Felhasználók</button></a>
+
+      <a  v-if="user" href="/jutsu/list"><button class="menu-button">Jutsu lista</button></a>
+
+      <button  v-if="user" @click="signOut" class="logout-button">Kijelentkezés</button>
+    </div>
 
 
+  </div>
 </template>
 
 <style scoped>
@@ -51,13 +75,14 @@ button:hover {
   border-color: #f58b00;
 }
 
+.login-button {
+  border-color: green;
+  color: green;
+}
+
 .logout-button {
   border-color: red;
   color: red;
 }
 
 </style>
-
-<script>
-
-</script>

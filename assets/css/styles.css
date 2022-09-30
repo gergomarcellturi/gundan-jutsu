@@ -2,10 +2,68 @@ body {
     background-color: #171717;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
+h1, h2, h3 {
+    color: #f58b00;
+    text-align: center;
+}
+
 .hover-pointer:hover {
     cursor: pointer;
 }
 
+.gundan-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #f58b0055;
+    caret-color: #f58b00;
+    transition: .2s;
+    color: #f7eacd;
+}
+
+.gundan-input:focus {
+    border-bottom: 2px solid #f58b00;
+}
+
+.gundan-button {
+    background: transparent;
+    min-width: 100px;
+    border-color: #f58b00;
+    color: #f58b00;
+    transition: .2s;
+}
+
+.gundan-button-accept {
+    color: green;
+    border-color: green;
+}
+
+.gundan-button-warn {
+    color: yellow;
+    border-color: yellow;
+}
+
+.gundan-button-alert {
+    color: red;
+    border-color: red;
+}
+
+.gundan-button:hover {
+    background: transparent;
+    min-width: 100px;
+    border-color: white;
+    color: white;
+}
+
+
+.horizontal-divider {
+    height: 2px;
+    width: 100%;
+    background-color: #f58b0011;
+}
 
 /*@font-face {*/
 /*    font-family: "ReggaeOne-Regular";*/
