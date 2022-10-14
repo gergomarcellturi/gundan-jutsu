@@ -1,0 +1,20 @@
+<template>
+  <header class="header">
+    <nav class="header__nav" id="navbar">
+      <ul class="header__list">
+        <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
+        <li class="header__item"><a href="about.html" class="header__link">About</a></li>
+        <li class="header__item"><a href="services.html" class="header__link">Services</a></li>
+        <li class="header__item"><a href="services.html" class="header__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<script>
+
+
+export default {
+  name: 'JutsuNav',
+}
+</script>

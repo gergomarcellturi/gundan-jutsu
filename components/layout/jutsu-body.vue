@@ -4,7 +4,7 @@ import JutsuImageCarousel from "./jutsu-image-carousel";
 import ninjaCouncilLogo from "assets/svg/ninjacouncilIcon.svg";
 import moderatorLogo from "assets/svg/moderatorIcon.svg";
 import gearLogo from "assets/svg/gear.svg";
-import infoLogo from "assets/svg/info.svg";
+import infoLogo from "assets/icons/info.png";
 import {Jutsu} from "../model/Jutsu";
 import {Restriction} from "../model/enum/Restriction";
 
@@ -216,7 +216,7 @@ export default {
   <div class="body">
 
     <div class="info-container">
-      <div class="carousel-container" v-if="jutsu.images.length > 0">
+      <div class="carousel-container" v-if="jutsu.image">
         <div class="carousel-container">
           <slot/>
         </div>
@@ -235,18 +235,18 @@ export default {
           </div>
         </div>
 
-        <div class="lower-part" v-if="jutsu.restrictions.length > 0 || jutsu.jutsuRequirement.length > 0">
+        <div class="lower-part" v-if="jutsu.restriction > 0 || jutsu.jutsuRequirements.length > 0">
           <div class="restriction-row">
-            <div class="logo" v-if="jutsu.restrictions.includes(Restriction.ENGEDELYES)">
+            <div class="logo" v-if="jutsu.restriction === Restriction.ENGEDELYES">
               <img :src="ninjaCouncilLogo" class="restriction-logo" alt="nt logo">
             </div>
-            <div class="logo" v-if="jutsu.restrictions.includes(Restriction.ENGEDELYES)">
+            <div class="logo" v-if="jutsu.restriction === Restriction.ENGEDELYES">
               <img :src="moderatorLogo" class="restriction-logo" alt="nt logo">
             </div>
           </div>
 
-          <div class="requirement-row" v-if="jutsu.jutsuRequirement.length > 0">
-            <div class="requirement-item" v-for="req in jutsu.jutsuRequirement">
+          <div class="requirement-row" v-if="jutsu.jutsuRequirements.length > 0">
+            <div class="requirement-item" v-for="req in jutsu.jutsuRequirements">
               <img :src="gearLogo" class="requirement-logo">
               <span class="requirement-text">{{req.jpName}}</span>
               <span class="requirement-text-hun">{{req.huName}}</span>
@@ -259,10 +259,10 @@ export default {
     </div>
 
     <div class="description-container">
-      <p v-for="info in jutsu.info.sort((a, b) => a.order - b.order)"
-         :style="{color: info.color}"
+      <p :style="{color: '#EF5F5F'}" v-if="jutsu.info"
          class="description">
-        <img class="info-logo" src="assets/icons/info.png">{{info.text}}
+        <img class="info-logo" :src="infoLogo">
+        {{jutsu.info}}
       </p>
 
       <p class="description">

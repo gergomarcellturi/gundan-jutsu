@@ -76,12 +76,12 @@ export default {
 <template>
   <div class="header-container">
     <div
-        :style="{border: `1px solid ${jutsu.type.secondaryColor}`,
-                 'box-shadow': `0 0 3px ${jutsu.type.secondaryColor}`,
-                 background: `radial-gradient(${jutsu.type.secondaryColor}, ${jutsu.type.primaryColor})`
+        :style="{border: `1px solid ${jutsu.style.secondaryColor}`,
+                 'box-shadow': `0 0 3px ${jutsu.style.secondaryColor}`,
+                 background: `radial-gradient(${jutsu.style.secondaryColor}, ${jutsu.style.primaryColor})`
         }"
         class="kanji-container">
-      {{ jutsu.kanji }}
+      {{ jutsu.style.kanji }}
     </div>
     <div class="name-container">
       <div class="japanese-name jutsu-name">{{ jutsu.jpName }}</div>

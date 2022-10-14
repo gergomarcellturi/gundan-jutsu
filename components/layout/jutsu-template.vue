@@ -40,8 +40,8 @@ export default {
 
   <div
       :style="{
-      'border-color': jutsu.type.primaryColor,
-      'box-shadow': `0 0 8px ${jutsu.type.primaryColor}`
+      'border-color': jutsu.style.primaryColor,
+      'box-shadow': `0 0 8px ${jutsu.style.primaryColor}`
       }"
       class="jutsu-container">
     <JutsuHeader :jutsu="jutsu"></JutsuHeader>

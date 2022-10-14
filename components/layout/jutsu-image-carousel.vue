@@ -28,18 +28,10 @@ export default {
 </style>
 
 <template>
-  <carousel :items-to-show="1" :autoplay="5000">
-    <slide v-for="image in jutsu.images" :key="image">
-      <div class="image-element"
-           :style="{'background-image': `url(${image})`,
-            'border-color': `${jutsu.primaryColor}`,
-            'box-shadow': `0 0 8px ${jutsu.primaryColor}`
+  <div class="image-element"
+       :style="{'background-image': `url(${jutsu.image})`,
+            'border-color': `${jutsu.style.primaryColor}`,
+            'box-shadow': `0 0 8px ${jutsu.style.primaryColor}`
             }">
-      </div>
-    </slide>
-
-    <template #addons>
-
-    </template>
-  </carousel>
+  </div>
 </template>
