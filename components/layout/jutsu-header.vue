@@ -5,7 +5,8 @@ export default {
   name: 'JutsuHeader',
   props: {
     jutsu: Jutsu,
-  }
+    jutsuStyle: {},
+  },
 }
 </script>
 
@@ -76,12 +77,12 @@ export default {
 <template>
   <div class="header-container">
     <div
-        :style="{border: `1px solid ${jutsu.style.secondaryColor}`,
-                 'box-shadow': `0 0 3px ${jutsu.style.secondaryColor}`,
-                 background: `radial-gradient(${jutsu.style.secondaryColor}, ${jutsu.style.primaryColor})`
+        :style="{border: `1px solid ${jutsuStyle.secondaryColor}`,
+                 'box-shadow': `0 0 3px ${jutsuStyle.secondaryColor}`,
+                 background: `radial-gradient(${jutsuStyle.secondaryColor}, ${jutsuStyle.primaryColor})`
         }"
         class="kanji-container">
-      {{ jutsu.style.kanji }}
+      {{ jutsuStyle.kanji }}
     </div>
     <div class="name-container">
       <div class="japanese-name jutsu-name">{{ jutsu.jpName }}</div>

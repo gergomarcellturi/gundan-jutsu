@@ -1,29 +1,34 @@
-/*@font-face {*/
-/*    font-family: "ReggaeOne-Regular";*/
-/*    src: url("assets/fonts/ReggaeOne-Regular.ttf");*/
-/*}*/
-
-/*@font-face {*/
-/*    font-family: "MochiyPopOne-Regular";*/
-/*    src: url("assets/fonts/MochiyPopOne-Regular.ttf");*/
-/*}*/
-
-/*@font-face {*/
-/*    font-family: "001Shirokuma-Regular";*/
-/*    src: url("assets/fonts/001Shirokuma-Regular.otf");*/
-/*}*/
-
 @font-face {
     font-family: "nagayama_kai08";
     src: url("assets/fonts/nagayama_kai08.otf");
 }
 
-/*@font-face {*/
-/*    font-family: "amakara_sample";*/
-/*    src: url("assets/fonts/amakara_sample.ttf");*/
-/*}*/
-
 @font-face {
     font-family: "ComicSansMS3";
     src: url("assets/fonts/ComicSansMS3.ttf");
+}
+
+.gundan-input {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #575757;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    outline: none;
+    caret-color: #f58b00;
+    color: #f58b00;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.gundan-input:focus {
+    border-color: #f58b00AA;
+}
+
+.gundan-input::placeholder {
+    color: #575757;
+    font-width: bold;
 }

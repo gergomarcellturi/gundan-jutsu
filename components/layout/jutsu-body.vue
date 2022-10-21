@@ -7,6 +7,7 @@ import gearLogo from "assets/svg/gear.svg";
 import infoLogo from "assets/icons/info.png";
 import {Jutsu} from "../model/Jutsu";
 import {Restriction} from "../model/enum/Restriction";
+import {useJutsuList} from "../../composables/useStates";
 
 let rankMap = {
   Splus: '#e0b302',
@@ -32,6 +33,11 @@ export default {
       gearLogo,
       infoLogo,
       Restriction
+    }
+  },
+  computed: {
+    jutsuReq() {
+      return useJutsuList().value.filter(j => this.jutsu.jutsuRequirements.map(r => r.id).includes(j.uid))
     }
   }
 }
@@ -245,8 +251,8 @@ export default {
             </div>
           </div>
 
-          <div class="requirement-row" v-if="jutsu.jutsuRequirements.length > 0">
-            <div class="requirement-item" v-for="req in jutsu.jutsuRequirements">
+          <div class="requirement-row" v-if="jutsuReq.length > 0">
+            <div class="requirement-item" v-for="req in jutsuReq">
               <img :src="gearLogo" class="requirement-logo">
               <span class="requirement-text">{{req.jpName}}</span>
               <span class="requirement-text-hun">{{req.huName}}</span>
