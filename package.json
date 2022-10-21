@@ -11,7 +11,7 @@
     "push-dir": "^0.4.1"
   },
   "dependencies": {
-    "firebase": "^9.10.0",
+    "firebase": "^9.12.1",
     "vue3-carousel": "^0.1.46"
   }
 }

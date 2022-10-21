@@ -1,32 +1,30 @@
 import {useJutsuList, useJutsuStyleList} from "~/composables/useStates";
-import firebase from "firebase/compat";
 import {defineNuxtPlugin} from "#app";
-import initializeApp = firebase.initializeApp;
+import {initializeApp} from "@firebase/app";
+import {collection, getFirestore, onSnapshot} from "@firebase/firestore";
 
 export default defineNuxtPlugin(nuxtApp => {
     const firebaseConfig = {
         apiKey: "AIzaSyBIQ745b4yyUCkbaM8Is6YXS3S-of13zp8",
         authDomain: "gundan-jutsu.firebaseapp.com",
+        databaseURL: "https://gundan-jutsu-default-rtdb.europe-west1.firebasedatabase.app",
         projectId: "gundan-jutsu",
         storageBucket: "gundan-jutsu.appspot.com",
         messagingSenderId: "1083124517666",
-        appId: "1:1083124517666:web:9a714edd8909490b6d337b",
-        measurementId: "G-5V1X7CNYPC"
+        appId: "1:1083124517666:web:d9c8cb4a9d937caa6d337b",
+        measurementId: "G-L760SHBZQ8"
     };
 
     initializeApp(firebaseConfig);
     const jutsuList = useJutsuList();
     const jutsuStyleList= useJutsuStyleList();
 
-    // console.log()
-    //
-    const store = firebase.firestore();
-    store.collection('jutsus').onSnapshot(snap => {
-        console.log(snap.docs.map(d => d.data()));
-        jutsuList.value = snap.docs.map(d => d.data());
+    onSnapshot(collection(getFirestore(), 'jutsus'), snapshot => {
+        jutsuList.value = snapshot.docs.map(d => d.data());
     })
-    store.collection('styles').onSnapshot(snap => {
-        console.log(snap.docs.map(d => d.data()));
-        jutsuStyleList.value = snap.docs.map(d => d.data());
+
+    onSnapshot(collection(getFirestore(), 'styles'), snapshot => {
+        jutsuStyleList.value = snapshot.docs.map(d => d.data());
     })
+
 });
